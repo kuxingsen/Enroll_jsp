@@ -35,22 +35,21 @@ public class IndexServlet extends HttpServlet {
         String code = request.getParameter("code");
         if(code == null||code.isEmpty())//先判断是否已授权 code为授权令牌
         {
-            //System.out.println("????????");
+            System.out.println("????????");
             String url=au.forwardurl(AppContent.BACK_URL,"what",Authorize.DISPLAY_TAG_T.WEB);
-            //System.out.println(url);
+            System.out.println(url);
             response.sendRedirect(url);
         }
         else{
             //System.out.println(code);
             String back = au.querytoken(code,AppContent.BACK_URL);
             JSONObject json = JSONObject.fromObject(back);
-            //System.out.println(json);
-            //printWriter.print(json);
             //String access_token = json.get("access_token").toString();//获取授权凭证
             httpSession.setAttribute("access_token",json.get("access_token").toString());
             //System.out.println(httpSession.getAttribute("access_token"));
             httpSession.setAttribute("yb_userid",json.get("userid").toString());
-            //JSONObject json2= JSONObject.fromObject(DemoApi.MSG(json.get("access_token").toString(),"10967192","测试消息接口","user"));
+            JSONObject json1= JSONObject.fromObject(DemoApi.letter(json.get("access_token").toString(),"10967292","测试消息接口","user"));
+            System.out.println(json1);
             request.getRequestDispatcher("/toPrepare").forward(request,response);
             /*
             System.out.println("Index.........");

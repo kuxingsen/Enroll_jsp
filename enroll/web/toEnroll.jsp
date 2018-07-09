@@ -99,6 +99,8 @@
     <br/>
     <input type="submit" value="报名">
     <br/><br/>
+    <c:if test="${sessionScope.friendList != null}">
+
     推荐好友：<c:forEach var="i" begin="0" end="${sessionScope.friendList.size()-1}">
     <%--${sessionScope.friendList.getJSONObject(i).get("yb_userid")}
     <c:set var="token" value="${sessionScope.access_token}"/>
@@ -109,14 +111,19 @@
     <a href = "#" onclick="HttpSimple()">
             ${sessionScope.friendList.getJSONObject(i).get("yb_usernick")}&nbsp;
     </a>
+
     </c:forEach>
+
+    </c:if>
     <br/><br/>
+    <c:if test="${sessionScope.newsList != null}">
     资讯推送：<br/>
     <c:forEach var="i" begin="0" end="${sessionScope.newsList.size()-1}">
         <a href = "${sessionScope.newsList.getJSONObject(i).get("push_href")}">
                 ${sessionScope.newsList.getJSONObject(i).get("push_title")}<br/>
         </a>
     </c:forEach>
+    </c:if>
 </form>
 
 </body>

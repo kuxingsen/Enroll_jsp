@@ -2,9 +2,6 @@ package cn.yiban.Service;
 
 import cn.yiban.Bean.Student;
 import cn.yiban.Dao.Jdbc;
-import cn.yiban.YBAPI.DemoApi;
-import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;

@@ -131,7 +131,6 @@ public class DemoApi {
         param.add(new BasicNameValuePair("template", template));
         return HTTPSimple.POST(YIBAN_OPEN_URL + API_MSG_LETTER, param);
     }
-
     /**
      * 以下为 资讯服务接口
      */

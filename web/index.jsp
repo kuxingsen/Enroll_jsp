@@ -1,8 +1,4 @@
-<%@ page import="org.apache.http.NameValuePair" %>
-<%@ page import="java.util.List" %>
-<%@ page import="java.util.ArrayList" %>
-<%@ page import="org.apache.http.message.BasicNameValuePair" %>
-<%@ page import="cn.yiban.YBAPI.HTTPSimple" %>
+
 <%--
   Created by IntelliJ IDEA.
   User: 傻逼
@@ -16,5 +12,6 @@
     <title>$Title$</title>
   </head>
   <body>
+  enroll——jsp
   </body>
 </html>

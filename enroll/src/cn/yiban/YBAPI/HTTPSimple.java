@@ -58,7 +58,7 @@ public class HTTPSimple
                 if(h.length > 0)
                 {
                     httpclient.close();
-                    return cn.yiban.util.HTTPSimple.GET(h[0].toString().substring(10));
+                    return HTTPSimple.GET(h[0].toString().substring(10));
                 }
             }
             HttpEntity entity = response.getEntity();
